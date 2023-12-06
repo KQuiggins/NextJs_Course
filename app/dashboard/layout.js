@@ -1,6 +1,6 @@
-import React from 'react'
 
-const Layout = ({children}) => {
+
+export default function Layout({children}) {
   return (
 
     <div>
@@ -10,4 +10,3 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout
