@@ -3,61 +3,107 @@
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-export default function Header(){
+export default function Header() {
 	const pathname = usePathname();
-    const router = useRouter();
+	const router = useRouter();
 	return (
 		<header>
 			<ul className='flex justify-center gap-2'>
 				<li>
 					<span
-                        onClick={() => router.push('/')}
+						onClick={() => router.push('/')}
 						className={`hover:underline link ${
-							pathname === '/' ? 'active border-b-2 border-white' : ''
+							pathname === '/'
+								? 'active border-b-2 border-white'
+								: ''
 						}`}
 						href='/'
 					>
-                        Home
-
+						Home
 					</span>
 				</li>
-				<li
-
-				>
+				<li>
 					<span
-                        onClick={() => router.push('/dashboard')}
-                        className={`hover:underline link ${
-                        pathname === '/dashboard' ? 'active border-b-2 border-white' : ''
-                        }`}
-                        href='/dashboard'
-                    >
-                Dashboard
-                    </span>
+						onClick={() => router.push('/dashboard')}
+						className={`hover:underline link ${
+							pathname === '/dashboard'
+								? 'active border-b-2 border-white'
+								: ''
+						}`}
+						href='/dashboard'
+					>
+						Dashboard
+					</span>
 				</li>
-				<li
-
-				>
+				<li>
 					<span
-                        onClick={() => router.push('/blog')}
-                        className={`hover:underline link  ${
-						pathname === '/blog' ? 'active border-b-2 border-white': ''
-					}`} href='/blog'>
-                        Blog
-                    </span>
+						onClick={() => router.push('/blog')}
+						className={`hover:underline link  ${
+							pathname === '/blog'
+								? 'active border-b-2 border-white'
+								: ''
+						}`}
+						href='/blog'
+					>
+						Blog
+					</span>
 				</li>
-				<li
-
-				>
+				<li>
 					<span
-                        onClick={() => router.push('/dashboard/settings')}
-                        className={`hover:underline link  ${
-						pathname === '/dashboard/settings' ? 'active border-b-2 border-white': ''
-					}`} href='/dashboard/settings'>
-                        Settings
-                    </span>
+						onClick={() => router.push('/dashboard/settings')}
+						className={`hover:underline link  ${
+							pathname === '/dashboard/settings'
+								? 'active border-b-2 border-white'
+								: ''
+						}`}
+						href='/dashboard/settings'
+					>
+						Settings
+					</span>
+				</li>
+				<li>
+					<span
+						onClick={() => router.push('/about')}
+						className={`hover:underline link  ${
+							pathname === '/about'
+								? 'active border-b-2 border-white'
+								: ''
+						}`}
+						href='/about'
+					>
+						About
+					</span>
+				</li>
+				<li>
+					<span
+						onClick={() => router.push('/services')}
+						className={`hover:underline link  ${
+							pathname === '/services'
+								? 'active border-b-2 border-white'
+								: ''
+						}`}
+						href='/services'
+					>
+						Services
+					</span>
+				</li>
+				<li>
+					<span
+						onClick={() => router.push('/account')}
+						className={`hover:underline link  ${
+							pathname === '/account'
+								? 'active border-b-2 border-white'
+								: ''
+						}`}
+						href='/account'
+					>
+						Account
+					</span>
 				</li>
 			</ul>
 			<div className='text-center'>
+
+      {/* Buttons */}
 				<button
 					onClick={() => router.back()}
 					className='bg-blue-500 w-20 h-10 rounded-sm mr-4 mt-10 '
@@ -71,9 +117,6 @@ export default function Header(){
 					Forward
 				</button>
 			</div>
-
 		</header>
 	);
-};
-
-
+}
